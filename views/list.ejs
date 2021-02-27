@@ -1,0 +1,35 @@
+<%- include("header") -%>
+
+<div class="weather">
+  <span class="location"><p class="weather-app">Location</p></span>
+  <span class="temperature-description"><p class="weather-app">Description</p></span>
+  <div class="temperature">
+    <span class="temperature-value"><p class="weather-app">Temperature value</p></span>
+    <div class="icon-weather"></div> 
+  </div>
+</div>
+
+<div class="box" id="heading">
+  <h1><%= listTitle %></h1>
+</div>
+
+<div class="box">
+  <% for (var i = 0; i < newList.length; i++){ %>
+  <div class="item">
+    <input type="checkbox" />
+    <p><%= newList[i] %></p>
+  </div>
+  <% } %>
+
+  <form class="item" name="myForm" action="/" method="POST" onsubmit="return validateForm()">
+    <input type="text" name="todo" placeholder="New Item" autocomplete="off" />
+    <button type="submit" name="list" value="<%= listTitle %>">+</button>
+  </form>
+</div>
+
+<div class="quote">
+  <p>This is a quote</p>
+</div>
+
+
+<%- include("footer") -%>

@@ -1,0 +1,135 @@
+html {
+  background-color: #e4e9fd;
+  background: url("https://source.unsplash.com/daily?sea") no-repeat center
+    center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  font-family: "helvetica neue";
+}
+
+h1 {
+  color: rgba(9, 70, 184, 0.897);
+  padding: 10px;
+  z-index: 1;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #fff;
+  opacity: 0.9;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+  /* background-color: #f9f7fc; */
+  text-align: center;
+  position: relative;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input:checked + p {
+  text-decoration: line-through;
+  text-decoration-color: rgba(11, 99, 150, 0.897);
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: rgba(11, 99, 150, 0.897);
+}
+
+form {
+  text-align: center;
+  margin-left: 20px;
+}
+
+button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border-color: transparent;
+  background-color: rgba(44, 169, 241, 0.897);
+  color: #fff;
+  font-size: 30px;
+  border-width: 0;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  background-color: rgba(232, 243, 245, 0.699);
+  color:rgba(9, 70, 184, 0.897);
+  box-shadow: inset 0 -3px 0 0 #e9e7ec;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+.quote p {
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+}
+
+.weather {
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  padding: 0;
+}
+
+.weather-app {
+  padding: 0;
+  color: #fff;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  align-items: flex-start;
+}
+
+span.temperature-value {
+  align-self: center;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem; 
+}
