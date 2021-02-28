@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const geolocator = require("geolocator");
 const https = require("https");
 const date = require(__dirname + "/date.js");
-
+const { getQuote } = require(__dirname + "/quote.js");
 
 const app = express();
 
@@ -20,8 +20,7 @@ app.use(express.static("public"));
 let items = [];
 let workItems = [];
 
-
-app.get("/", function (req, res) {
+app.get("/", getQuote, (req, res) => {
 
   let day = date.getDate();
   let year = date.getYear();
@@ -30,11 +29,12 @@ app.get("/", function (req, res) {
           listTitle: day,
           newList: items,
           year: year,
+          quote: res.quote
        });
   });
 
 
-app.post("/", function (req, res) {
+app.post("/", (req, res) => {
   let item = req.body.todo;
 
   if (req.body.list === "Work List") {
@@ -48,14 +48,15 @@ app.post("/", function (req, res) {
 
 
 // work director
-app.get("/work", function (req, res) {
+app.get("/work", getQuote, (req, res) => {
   res.render("list", {
     listTitle: "Work List",
-    newList: workItems
+    newList: workItems,
+    quote: res.quote
   });
 });
 
-app.post("/work", function (req, res) {
+app.post("/work", (req, res) => {
   let item = req.body.todo;
   workItems.push(item);
   res.redirect("/");
