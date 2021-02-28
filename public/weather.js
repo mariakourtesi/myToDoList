@@ -126,39 +126,3 @@ tempElement.addEventListener("click", function(){
     }
 });
 
-
-
-
-
-
-
-// //////////////////
-
-//  function weather() {
-
-//   const apiKey = "1958e098d51e832d748e677492b365b9";
-
-//   navigator.geolocation.getCurrentPosition(position);
-  
-//   var lat = position.coords.latitude;
-//   var lon = position.coords.longitude;
-  
-
-//   const url =
-//     "https://api.openweathermap.org/data/2.5/weather?lat=" +
-//     lat +
-//     "&lon" +
-//     lon +
-//     "?appid=" +
-//     apiKey +
-//     "&units=metric";
-
-//   return https.get(url, function (response) {
-//     response.on("data", function (data) {
-//       const weatherData = JSON.parse(data);
-//       const temp = weatherData.main.temp;
-//       const icon = weatherData.weather[0].icon;
-//       const imageURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
-//     });
-//   });
-// };
